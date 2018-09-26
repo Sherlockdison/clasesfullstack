@@ -187,15 +187,113 @@
             }
            }
           echo numerosAleatorios1();
+          echo "<hr>";
 
           function arrayAso(){
           $mascota = array('animal' => 'gato' ,'edad' => 2,'altura' => 0.30,'nombre' => 'Frita');
 
           foreach ($mascota as $animal => $value) {
-            // code...
+            echo "$animal".": "."$value <br>";
+            }
           }
+          echo arrayAso();
+
+          echo "<hr>";
+
+          function paises(){
+            $ceu = array
+            (
+              "Italia"=>"Roma",
+              "Luxembourg"=>"Luxembourg",
+              "Bélgica"=> "Bruselas",
+              "Dinamarca"=>"Copenhagen",
+              "Finlandia"=>"Helsinki",
+              "Francia" => "Paris",
+              "Slovakia"=>"Bratislava",
+              "Eslovenia"=>"Ljubljana",
+              "Alemania" => "Berlin",
+              "Grecia" => "Athenas",
+              "Irlanda"=>"Dublin",
+              "Holanda"=>"Amsterdam",
+              "Portugal"=>"Lisbon",
+              "España"=>"Madrid",
+              "Suecia"=>"Stockholm",
+              "Reino Unido"=>"London",
+              "Chipre"=>"Nicosia",
+              "Lithuania"=>"Vilnius",
+              "Republica Checa"=>"Prague",
+              "Estonia"=>"Tallin",
+              "Hungría"=>"Budapest",
+              "Latvia"=>"Riga",
+              "Malta"=>"Valletta",
+              "Austria" => "Vienna",
+              "Polonia"=>"Warsaw"
+            );
+/* Funcion para ordenar array asociativas en varios ambitos probada actualmente solo para string alfabeticamente*/
+            array_multisort($ceu);
+
+            foreach ($ceu as $pais => $capital) {
+              echo "La capital de  $pais es $capital <br>";
+            }
           }
+          echo paises();
+
+          echo "<hr>";
+
+          function ciudades(){
+            $ceu = [
+              "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"],
+              "Brasil" => ["Brasilia", "Rio de Janeiro", "Sao Pablo"],
+              "Colombia" => ["Cartagena", "Bogota", "Barranquilla"],
+              "Francia" => ["Paris", "Nantes", "Lyon"],
+              "Italia" => ["Roma", "Milan", "Venecia"],
+              "Alemania" => ["Munich", "Berlin", "Frankfurt"]
+              ];
+
+              foreach ($ceu as $pais => $ciudades) {
+                echo "Las ciudades de $pais son: <br>
+                                          - $ciudades[0] <br>
+                                          - $ciudades[1] <br>
+                                          - $ciudades[2] <hr>
+                                          ";
+              }
+          }
+          echo ciudades();
+
+          echo "<hr>";
+          echo "<hr>";
+
+
+/* pedir una explicacion sobre como se puede trabajar con este ejemplo
+          function paisesAmericanos(){
+          $ceu = array(
+            "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé", "esAmericano"],
+            "Brasil" => ["Brasilia", "Rio de Janeiro", "Sao Pablo", "esAmericano"],
+            "Colombia" => ["Cartagena", "Bogota", "Barranquilla", "esAmericano"],
+            "Francia" => ["Paris", "Nantes", "Lyon", "esAmericano"],
+            "Italia" => ["Roma", "Milan", "Venecia", "esEuropeo"],
+            "Alemania" => ["Munich", "Berlin", "Frankfurt", "esEuropea"]
+          );
+
+          foreach ($ceu as $pais => $ciudades) {
+            if ($pais[$ciudades(4)] == "esAmericano") {
+              echo "Las ciudades de $pais son: <br>
+              - $ciudades[0] <br>
+              - $ciudades[1] <br>
+              - $ciudades[2] <hr>
+              ";
+            }else {
+              echo "Encontramos un esEuropeo";
+            }
+          }
+        }
+        echo paisesAmericanos(); */
+
+
+
      ?>
+
+
      <?php  ?>
   </body>
 </html>
