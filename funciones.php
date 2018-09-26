@@ -122,7 +122,6 @@
             $numeroDeVeces1 = 0;
             $cara1 = 1;
             $numero2 = 0;
-            var_dump($cara1);
             do {
               $numeroDeVeces1++;
               if (rand(0, 1) === 1) {
@@ -164,14 +163,39 @@
           echo "<hr>";
 
           function conForEachRange(){
-            $digitalHouse = [];
+
             foreach (range("a", "o") as $piso => $letra) {
               echo "En la posición [$piso] se encuentra el valor [$letra] <br>";
             }
           }
 
           echo conForEachRange();
+          echo "<hr>";
 
+          function numerosAleatorios1() {
+
+            $aleatorios = [rand(0,10), rand(0,10), rand(0,10), rand(0,10), rand(0,10), rand(0,10), rand(0,10), rand(0,10), rand(0,10), rand(0,10)];
+
+            $contador = 0;
+
+          for ($i=0; $i < count($aleatorios); $i++) {
+            if ($aleatorios[$i] === 5) {
+              echo "Epa! sale $aleatorios[$i]";
+              break;
+            }
+              echo "sale $aleatorios[$i] <br>";
+            }
+           }
+          echo numerosAleatorios1();
+
+          function arrayAso(){
+          $mascota = array('animal' => 'gato' ,'edad' => 2,'altura' => 0.30,'nombre' => 'Frita');
+
+          foreach ($mascota as $animal => $value) {
+            // code...
+          }
+          }
      ?>
+     <?php  ?>
   </body>
 </html>
